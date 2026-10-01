@@ -20,7 +20,6 @@ This repository provides the reproducible machine learning-driven Quantitative S
 * **Virtual Screening:** Sequential screening cascade of seaweed-derived metabolites prioritizing potent dual-target lead candidates.
 
 ---
-We adapted and extended this computational pipeline from the ML-QSAR framework established by Ali et al. (Digital Discovery, 2026, https://doi.org/10.1039/d6dd00045b). We gratefully acknowledge the authors for their open-science contribution.
 
 ## 🎯 Virtual Screening Cascade
 To identify synergistic dual-target candidates, a sequential multi-stage screening strategy was implemented across a curated library of seaweed-derived metabolites:
@@ -32,7 +31,7 @@ To identify synergistic dual-target candidates, a sequential multi-stage screeni
                  │
                  ▼  (Cross-screened against AURKA ML-QSAR.ipynb)
   [ 85 Potent Dual-Target Inhibitors (pIC50 > 6.0 for both CDK1 & AURKA) ]
-
+````
 
 ## 📂 Repository Structure
 ```text
@@ -41,5 +40,8 @@ To identify synergistic dual-target candidates, a sequential multi-stage screeni
 ├── requirements.txt                      # Environment dependencies
 ├── data/                                 # Curated ChEMBL datasets & seaweed screening library/ CDK1 screened compounds
 └── figures/                              # Parity plots, Williams plot, SHAP summary plots
+
+```
+We adapted and extended this computational pipeline from the ML-QSAR framework established by Ali et al. (Digital Discovery, 2026, https://doi.org/10.1039/d6dd00045b). We gratefully acknowledge the authors for their open-science contribution.
 
 
