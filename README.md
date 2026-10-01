@@ -20,14 +20,27 @@ This repository provides the reproducible machine learning-driven Quantitative S
 * **Virtual Screening:** Sequential screening cascade of seaweed-derived metabolites prioritizing potent dual-target lead candidates.
 
 ---
-This computational pipeline was adapted and extended from the ML-QSAR framework established by Ali et al. (*Digital Discovery*, 2026, https://doi.org/10.1039/d6dd00045b). We gratefully acknowledge the authors for their open-science contribution.
 
----
+## 🎯 Virtual Screening Cascade
+To identify synergistic dual-target candidates, a sequential multi-stage screening strategy was implemented across a curated library of seaweed-derived metabolites:
+```text
+  [ 687 Curated Seaweed Compounds ]
+                 │
+                 ▼  (Screened against ML_QSAR_Pipeline_for_CDK1.ipynb)
+  [ 249 Active Hits (Predicted pIC50 > 6.0) ]
+                 │
+                 ▼  (Cross-screened against AURKA ML-QSAR.ipynb)
+  [ 85 Potent Dual-Target Inhibitors (pIC50 > 6.0 for both CDK1 & AURKA) ]
 
 ## 📂 Repository Structure
 ```text
-├── ML_QSAR_CDK1.ipynb       # Main reproducible workflow for CDK1
-├── ML_QSAR_AURKA.ipynb      # Reproducible workflow for AURKA
-├── requirements.txt         # Environment dependencies
-├── data/                    # Curated ChEMBL datasets & seaweed screening library
-└── figures/                 # Parity plots, Williams plot, SHAP summary plots
+├── ML_QSAR_Pipeline_for_CDK1.ipynb       # Main reproducible workflow for CDK1
+├── ML_QSAR_AURKA.ipynb                   # Reproducible workflow for AURKA
+├── requirements.txt                      # Environment dependencies
+├── data/                                 # Curated ChEMBL datasets & seaweed screening library/ CDK1 screened compounds
+└── figures/                              # Parity plots, Williams plot, SHAP summary plots
+
+
+We adapted and extended this computational pipeline from the ML-QSAR framework established by Ali et al. (Digital Discovery, 2026,
+DOI: 10.1039/d6dd00045b). We gratefully acknowledge the authors for their open-science contribution.
+
